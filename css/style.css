@@ -6,15 +6,117 @@ body {
   color: #ffffff;
 }
 
+/*-- begin page grid --*/
+
+.page-wrapper {
+  background-color: #849d8f;
+}
+.wrapper {
+  max-width: 1200px;
+  min-width: 900px;
+  margin: 0 auto;
+}
+.row, .row-inline {
+  padding: 0 2.3%;
+}
+.row::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.row-inline {
+  font-size: 0;
+}
+.row-inline::after {
+  display: none;
+}
+.col {
+  float: left;
+  box-sizing: border-box;
+  margin: 0 1.1%;
+}
+.row .col {
+  padding: 20px;
+}
+.row-inline .col {
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+}
+.row .col:first-child, .row-inline .col:first-child, .row-inline .col:nth-child(4n+1) {
+  margin-left: 0;
+}
+.row .col:last-child, .row-inline .col:last-child, .row-inline .col:nth-child(4n) {
+  margin-right: 0;
+}
+.s-2 {
+  width: 48.9%;
+}
+.s-4 {
+  width: 23.35%;
+}
+.to-left {
+  float: left;
+}
+.to-right {
+  float: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/*-- end page grid --*/
+
+
+/*-- begin design elements--*/
+
+.main-header {
+  padding-top: 10px;
+}
+.header-logo {
+  margin-left: -5px;
+}
+.promo-1 {
+  background: url("../img/pictures/promo-1.jpg") no-repeat;
+}
+.promo-2 {
+  background: url("../img/pictures/promo-2.jpg") no-repeat;
+}
+.catalog-item img {
+  width: 100%;
+}
+.promo-1, .promo-2, .main-about-us, .blog-news, .subscribe-form {
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/*-- end design elements--*/
+
+
+/*--begin headings --*/
+
 .main-about-us h1 {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
   color: #323232;
 }
-
 .slide h2 {
   font-weight: 900;
   font-size: 60px;
   line-height: 60px;
 }
+
+/*--end headings --*/
