@@ -19,6 +19,10 @@ body {
 .row, .row-inline {
   padding: 0 2.3%;
 }
+.filters .col {
+  margin: 0;
+  margin-right: 15px;
+}
 .row::after {
   content: '';
   display: table;
@@ -76,6 +80,11 @@ body {
   display: table;
   clear: both;
 }
+.filters fieldset, .filters button {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
 
 /*-- end page grid --*/
 
@@ -103,11 +112,6 @@ body {
 }
 .filters {
   font-size: 0;
-}
-.filters fieldset, .filters button {
-  font-size: 16px;
-  display: inline-block;
-  vertical-align: top;
 }
 
 /*-- end design elements--*/
