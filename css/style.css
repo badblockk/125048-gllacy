@@ -101,6 +101,14 @@ body {
   padding: 20px;
   border-radius: 15px;
 }
+.filters {
+  font-size: 0;
+}
+.filters fieldset, .filters button {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+}
 
 /*-- end design elements--*/
 
