@@ -12,6 +12,13 @@
 </head>
 
 <body>
+
+  <!-- begin slider controls -->
+  <input type="radio" id="btn-1" name="toggle" checked>
+  <input type="radio" id="btn-2" name="toggle">
+  <input type="radio" id="btn-3" name="toggle">
+  <!-- end slider controls -->
+
   <!-- begin page-wrapper -->
   <div class="page-wrapper">
 
@@ -28,12 +35,13 @@
             <ul class="main-menu">
               <li>
                 <a href="#">Каталог</a>
-                <ul>
+                <span class="menu-margin"></span>
+                <ul class="sub-menu">
                   <li>
-                    <a href="#">Новинки</a>
+                    <a class="highlight" href="#">Новинки</a>
                   </li>
                   <li>
-                    <a href="#">Сливочное</a>
+                    <a href="catalog.html">Сливочное</a>
                   </li>
                   <li>
                     <a href="#">Щербеты</a>
@@ -56,16 +64,17 @@
           </nav>
           <div class="header-buttons clearfix">
             <div class="search">
-              <a href="#" class="button-search"></a>
+              <a class="button-search" href="#"></a>
               <!-- <div class="search-form">
                 <form action="https://echo.htmlacademy.ru" method="post">
                   <input type="search" name="search" placeholder="Что ищем?">
                 </form>
               </div> -->
             </div>
-            <div class="user-block">
-              <a href="#" class="login">Вход</a>
-              <!-- <div class="login-form">
+            <div class="header-button user-block">
+              <div class="login">
+                <a href="#">Вход</a>
+                <!-- <div class="login-form">
                 <form action="https://echo.htmlacademy.ru" method="post">
                   <input type="email" name="email" placeholder="Электронная почта" required>
                   <input type="text" name="password" placeholder="Пароль" required>
@@ -80,8 +89,9 @@
                   </p>
                 </div>
               </div> -->
+              </div>
             </div>
-            <div class="cart">
+            <div class="header-button cart">
               <span>Пусто</span>
             </div>
           </div>
@@ -98,41 +108,37 @@
       <!-- start main -->
       <div class="main">
         <div class="slider">
-          <div class="slide">
-            <div class="slide-text"></div>
-            <a href="" class="slide-btn"></a>
+          <div class="slide" id="slide1">
+            <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
+            <a class="slide-btn" href="#">Давайте оба!</a>
           </div>
-          <div class="slide text-center">
-            <h2>Крем-брюле и пломбир<br>с малиновым джемом</h2>
-            <a href="#">Давайте оба!</a>
+          <div class="slide" id="slide2">
+            <div class="slide-title">Шоколадный пломбир и лимонный сорбет</div>
+            <a class="slide-btn" href="#">Давайте оба!</a>
           </div>
-          <!-- <div class="slide text-center">
-            <h2>Шоколадный пломбир<br>и лимонный сорбет</h2>
-            <a href="#">Давайте оба!</a>
-          </div>
-          <div class="slide text-center">
-            <h2>Пломбир с помадкой<br>и клубничный щербет</h2>
-            <a href="#">Давайте оба!</a>
+          <div class="slide" id="slide3">
+            <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
+            <a class="slide-btn" href="#">Давайте оба!</a>
           </div>
           <div class="slider-controls">
-            <label class="slider-controls-active" for=""></label>
-            <label for=""></label>
-            <label for=""></label>
-          </div> -->
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+            <label for="btn-3"></label>
+          </div>
         </div>
         <div class="row">
           <div class="col s-2">
             <article class="promo promo-raspberry">
               <h2>Малинка даром!</h2>
               <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-              <a href="#">Хочу варенье!</a>
+              <a class="site-button" href="#">Хочу варенье!</a>
             </article>
           </div>
           <div class="col s-2">
             <article class="promo promo-chocolate">
               <h2>Шоколадки даром!</h2>
               <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-              <a href="#">Хочу шоколадки!</a>
+              <a class="site-button" href="#">Хочу шоколадки!</a>
             </article>
           </div>
         </div>
@@ -143,8 +149,8 @@
                 <a href="#">
                   <img src="img/ice-cream/ice-cream-1.jpg" width="100%" height="100%" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                 </a>
-                <div class="item-price">310 &#8381;/кг</div>
               </div>
+              <div class="item-price">310 &#8381;<span>/кг</span></div>
               <h2>Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
               <div class="item-button">
                 <a href="#">Быстрый просмотр</a>
@@ -157,8 +163,8 @@
                 <a href="#">
                   <img src="img/ice-cream/ice-cream-2.jpg" width="100%" height="100%" alt="Сливочно-кофейное с кусочками шоколада">
                 </a>
-                <div class="item-price">380 &#8381;/кг</div>
               </div>
+              <div class="item-price">380 &#8381;<span>/кг</span></div>
               <h2>Сливочно-кофейное с кусочками шоколада</h2>
               <div class="item-button">
                 <a href="#">Быстрый просмотр</a>
@@ -171,8 +177,8 @@
                 <a href="#">
                   <img src="img/ice-cream/ice-cream-3.jpg" width="100%" height="100%" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                 </a>
-                <div class="item-price">355 &#8381;/кг</div>
               </div>
+              <div class="item-price">355 &#8381;<span>/кг</span></div>
               <h2>Сливочно-клубничное с присыпкой из белого шоколада</h2>
               <div class="item-button">
                 <a href="#">Быстрый просмотр</a>
@@ -185,8 +191,8 @@
                 <a href="#">
                   <img src="img/ice-cream/ice-cream-4.jpg" width="100%" height="100%" alt="Сливочное крем-брюле с карамельной подливкой">
                 </a>
-                <div class="item-price">415 &#8381;/кг</div>
               </div>
+              <div class="item-price">415 &#8381;<span>/кг</span></div>
               <h2>Сливочное крем-брюле с карамельной подливкой</h2>
               <div class="item-button">
                 <a href="#">Быстрый просмотр</a>
