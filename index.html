@@ -28,7 +28,7 @@
       <!-- begin main-header -->
       <header class="main-header">
         <div class="row">
-          <nav class="main-nav">
+          <nav class="main-nav clearfix">
             <div class="header-logo">
               <img src="img/logo-gllacyshop.svg" width="153" height="63" alt="Gllacy Shop">
             </div>
@@ -63,7 +63,9 @@
           </nav>
           <div class="header-buttons clearfix">
             <div class="search">
-              <a class="button-search" href="#"></a>
+              <div class="search-wrapper">
+                <a class="button-search" href="#"></a>
+              </div>
               <div class="search-form">
                 <form action="https://echo.htmlacademy.ru" method="post">
                   <input type="search" name="search" placeholder="Что ищем?">
@@ -74,20 +76,20 @@
               <div class="login">
                 <a class="login-button" href="#">Вход</a>
                 <div class="login-form">
-                <form action="https://echo.htmlacademy.ru" method="post">
-                  <input type="email" name="email" placeholder="Электронная почта" required>
-                  <input type="text" name="password" placeholder="Пароль" required>
-                  <button class="site-button" type="submit" value="Войти">Войти</button>
-                </form>
-                <div class="reg-links">
-                  <p>
-                    <a href="">Забыли пароль?</a>
-                  </p>
-                  <p>
-                    <a href="">Новая регистрация</a>
-                  </p>
+                  <form action="https://echo.htmlacademy.ru" method="post">
+                    <input type="email" name="email" placeholder="Электронная почта" required>
+                    <input type="text" name="password" placeholder="Пароль" required>
+                    <button class="site-button" type="submit" value="Войти">Войти</button>
+                  </form>
+                  <div class="reg-links">
+                    <p>
+                      <a href="">Забыли пароль?</a>
+                    </p>
+                    <p>
+                      <a href="">Новая регистрация</a>
+                    </p>
+                  </div>
                 </div>
-              </div>
               </div>
             </div>
             <div class="header-button cart">
@@ -207,7 +209,7 @@
             <div class="col s-2">
               <article class="main-bottom blog">
                 <h2>Новое в нашем блоге</h2>
-                <a href="#">10 способов сервировки<br> фруктовых щербетов<br> к столу</a>
+                <a href="#"><span>10 способов сервировки</span><br> <span>фруктовых щербетов</span><br><span>к столу</span></a>
               </article>
             </div>
             <div class="col s-2">
@@ -229,7 +231,7 @@
     </div>
     <!-- end wrapper -->
 
-    <div class="map">
+    <div class="map-block" id="map">
       <div class="wrapper">
         <div class="map-address">
           <p>Адрес главного офиса и
@@ -241,20 +243,9 @@
             <span class="map-bold-text">8 812 450-25-25</span>
             <br> (с 10 до 20 ежедневно)</p>
           <div class="map-button-wrapper">
-            <a class="site-button" href="#">Форма обратной связи</a>
+            <a class="site-button feedback-button" href="#">Форма обратной связи</a>
           </div>
-          <!-- <div class="feedback-form">
-          <h2>Мы обязательно вам ответим!</h2>
-          <a class="feedback-form-close" href="#"></a>
-          <form action="https://echo.htmlacademy.ru" method="post">
-            <input type="text" name="name" placeholder="Как вас зовут?" required>
-            <input type="email" name="email" placeholder="Ваша почта для ответа?" required>
-            <textarea name="feedback-text" placeholder="Напишите что-нибудь..." required></textarea>
-            <button type="submit" value="Отправить">Отправить</button>
-          </form>
-        </div> -->
         </div>
-        <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=srZ5Epepi6b51_tnLC48XCCGJ37eDfOk&width=100%&height=430&lang=ru_UA&sourceType=constructor&scroll=true"></script> -->
       </div>
     </div>
 
@@ -302,6 +293,23 @@
   </div>
   <!-- end page-wrapper -->
 
+  <!-- begin popup-block -->
+  <div class="popup-feedback">
+    <h3>Мы обязательно вам ответим!</h3>
+    <button class="popup-close" type="button" title="Закрыть">Закрыть</button>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <input type="text" name="feedback-name" placeholder="Как вас зовут?">
+      <input type="email" name="name" placeholder="Ваша почта для ответа?">
+      <textarea name="feedback-text" rows="4" placeholder="Напишите что-нибудь..."></textarea>
+      <button class="site-button">Отправить</button>
+    </form>
+  </div>
+  <div class="popup-overlay">
+  </div>
+  <!-- end popup-block -->
+
+  <script src="http://api-maps.yandex.ru/2.1.17/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
