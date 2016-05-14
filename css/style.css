@@ -1766,6 +1766,10 @@ li.pagnition-active {
   border: none;
 }
 
+.filters-form .nowrap {
+  padding-right: 0;
+}
+
 .filters-form input {
   margin: 0;
 }
