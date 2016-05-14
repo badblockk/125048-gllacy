@@ -6,8 +6,8 @@
   <title>Глейси - Магазин по продаже мороженого</title>
   <meta name="description" content="Магазин Глейси  — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style_min.css" rel="stylesheet">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
@@ -69,25 +69,24 @@
               <div class="search-form">
                 <form action="https://echo.htmlacademy.ru" method="post">
                   <input type="search" name="search" placeholder="Что ищем?">
+                  <label class="hiden-top"><span>Что ищем?</span></label>
                 </form>
               </div>
             </div>
             <div class="header-button user-block">
               <div class="login">
                 <a class="login-button" href="#">Вход</a>
-                <div class="login-form">
-                  <form action="https://echo.htmlacademy.ru" method="post">
-                    <input type="email" name="email" placeholder="Электронная почта" required>
-                    <input type="text" name="password" placeholder="Пароль" required>
+                <div class="login-form clearfix">
+                  <form class="authorization-form" action="https://echo.htmlacademy.ru" method="post">
+                    <input type="email" name="email" placeholder="Электронная почта">
+                    <label class="hiden-top"><span>Электронная почта</span></label>
+                    <input type="text" name="password" placeholder="Пароль">
+                    <label class="hiden-top"><span>Пароль</span></label>
                     <button class="site-button" type="submit" value="Войти">Войти</button>
                   </form>
                   <div class="reg-links">
-                    <p>
-                      <a href="">Забыли пароль?</a>
-                    </p>
-                    <p>
-                      <a href="">Новая регистрация</a>
-                    </p>
+                    <a href="">Забыли пароль?</a>
+                    <a href="">Новая регистрация</a>
                   </div>
                 </div>
               </div>
@@ -148,7 +147,7 @@
             <article class="catalog-item">
               <div class="catalog-image-wrapper">
                 <a href="#">
-                  <img src="img/ice-cream/ice-cream-1.jpg" width="100%" height="100%" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                  <img src="img/ice-cream/ice-cream-1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                 </a>
                 <div class="item-price">310 &#8381;<span>/кг</span></div>
               </div>
@@ -160,7 +159,7 @@
             <article class="catalog-item">
               <div class="catalog-image-wrapper">
                 <a href="#">
-                  <img src="img/ice-cream/ice-cream-2.jpg" width="100%" height="100%" alt="Сливочно-кофейное с кусочками шоколада">
+                  <img src="img/ice-cream/ice-cream-2.jpg" alt="Сливочно-кофейное с кусочками шоколада">
                 </a>
                 <div class="item-price">380 &#8381;<span>/кг</span></div>
               </div>
@@ -172,7 +171,7 @@
             <article class="catalog-item">
               <div class="catalog-image-wrapper">
                 <a href="#">
-                  <img src="img/ice-cream/ice-cream-3.jpg" width="100%" height="100%" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                  <img src="img/ice-cream/ice-cream-3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                 </a>
                 <div class="item-price">355 &#8381;<span>/кг</span></div>
               </div>
@@ -184,7 +183,7 @@
             <article class="catalog-item">
               <div class="catalog-image-wrapper">
                 <a href="#">
-                  <img src="img/ice-cream/ice-cream-4.jpg" width="100%" height="100%" alt="Сливочное крем-брюле с карамельной подливкой">
+                  <img src="img/ice-cream/ice-cream-4.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
                 </a>
                 <div class="item-price">415 &#8381;<span>/кг</span></div>
               </div>
@@ -216,9 +215,10 @@
               <article class="main-bottom subscribe">
                 <div class="subscribe-wrapper">
                   <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-                  <form action="index.html" method="post">
-                    <input type="email" placeholder="Электронная почта" name="email">
-                    <input class="site-button" type="submit" value="Отправить">
+                  <form class="subscribe-form" action="index.html" method="post">
+                    <input type="email" name="subscribe-email" placeholder="Электронная почта" required>
+                    <label class="hiden-top"><span>Электронная почта</span></label>
+                    <button class="site-button" type="submit">Отправить</button>
                   </form>
                 </div>
               </article>
@@ -264,16 +264,18 @@
             </div>
           </div>
           <div class="col s-2">
-            <ul class="footer-menu">
-              <div class="footer-menu-col">
-                <li><a class="heart" href="#">Для поставщиков</a></li>
-                <li><a href="#">Наши документы</a></li>
-              </div>
-              <div class="footer-menu-col">
-                <li><a href="#">О производстве</a></li>
-                <li><a href="#">Экологические стандарты</a></li>
-              </div>
-            </ul>
+            <table class="footer-menu">
+              <tbody>
+                <tr>
+                  <td><a class="heart" href="#">Для поставщиков</a></td>
+                  <td><a href="#">Наши документы</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#">О производстве</a></td>
+                  <td><a href="#">Экологические стандарты</a></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div class="col s-1">
             <div class="footer-copyright">
@@ -298,18 +300,23 @@
     <h3>Мы обязательно вам ответим!</h3>
     <button class="popup-close" type="button" title="Закрыть">Закрыть</button>
     <form action="https://echo.htmlacademy.ru" method="post">
-      <input type="text" name="feedback-name" placeholder="Как вас зовут?">
-      <input type="email" name="name" placeholder="Ваша почта для ответа?">
-      <textarea name="feedback-text" rows="4" placeholder="Напишите что-нибудь..."></textarea>
+
+      <input type="text" name="feedback-name" placeholder="Как вас зовут?" required>
+      <label class="hiden-top"><span>Как вас зовут?</span></label>
+      <input type="email" name="email" placeholder="Ваша почта для ответа?" required>
+      <label class="hiden-top"><span>Ваша почта для ответа?</span></label>
+      <textarea name="feedback-text" placeholder="Напишите что-нибудь..." required></textarea>
+      <label class="hiden-top"><span>Напишите что-нибудь...</span></label>
       <button class="site-button">Отправить</button>
     </form>
   </div>
   <div class="popup-overlay">
   </div>
   <!-- end popup-block -->
+  
+  <script src="js/scripts_min.js"></script>
+  <script src="js/api-maps.yandex.ru_2.1.17.js"></script>
 
-  <script src="http://api-maps.yandex.ru/2.1.17/?lang=ru_RU" type="text/javascript"></script>
-  <script src="js/scripts.js"></script>
 </body>
 
 </html>
