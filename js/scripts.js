@@ -1,9 +1,12 @@
+var search_button = document.querySelector(".button-search");
 var search = document.querySelector(".search");
 var search_form = document.querySelector(".search-form");
 
+var cart_page = document.querySelector(".cart-button");
 var cart_button = document.querySelector(".cart-with-item");
 var cart_block = document.querySelector(".cart-block");
 
+var login_button = document.querySelector(".login-button");
 var link = document.querySelector(".login");
 var popup = document.querySelector(".login-form");
 var authorization = document.querySelector(".authorization-form");
@@ -23,19 +26,31 @@ var search_field = search_form.querySelector("[name=search]");
 var login_field = authorization.querySelector("[name=email]");
 var pass = authorization.querySelector("[name=password]");
 
-var storage = localStorage.getItem("login_field");
+// var storage = localStorage.getItem("login_field");
 
 link.addEventListener("mouseover", function(event) {
   event.preventDefault();
   popup.classList.add("modal-content-show");
 
-  if (storage) {
-    login_field.value = storage;
-    pass.focus();
-  } else {
-    login_field.focus();
-  }
+//   if (storage) {
+//     login_field.value = storage;
+//     pass.focus();
+//   } else {
+//     login_field.focus();
+//   }
+//
+});
 
+login_button.addEventListener("click", function(event) {
+    event.preventDefault();
+});
+
+cart_page.addEventListener("click", function(event) {
+    event.preventDefault();
+});
+
+search_button.addEventListener("click", function(event) {
+    event.preventDefault();
 });
 
 if (cart_button) {
@@ -51,6 +66,7 @@ if (cart_button) {
     cart_block.classList.remove("modal-content-show");
   })
 };
+
 
 link.addEventListener("mouseout", function(event) {
   popup.classList.remove("modal-content-show");
@@ -119,8 +135,9 @@ authorization.addEventListener("submit", function(event) {
     popup.classList.remove("modal-error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("modal-error");
-  } else {
-    localStorage.setItem("login_field", login_field.value);
+  }
+   else {
+    localStorage.setItem("login", login_field.value);
   }
 });
 

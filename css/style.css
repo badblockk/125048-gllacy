@@ -236,29 +236,29 @@ textarea:focus {
   white-space: nowrap;
 }
 
-.main-menu > li > a:active {
+.top-menu-item > a:active {
   background-color: #ededed;
   box-shadow: inset 0 2px 1px dimgrey;
 }
 
-.main-menu > li > a.active {
+.top-menu-item > a.active {
   color: #ffffff;
 
   background-color: #d07058;
   border-radius: 15px;
 }
 
-.main-menu > li:hover > a.active {
+.top-menu-item:hover > a.active {
   color: #ffffff;
 
   background-color: #d07058;
 }
 
-.main-menu > li > a.active::after {
+.top-menu-item > a.active::after {
   display: none;
 }
 
-.main-menu > li:hover > a {
+.top-menu-item:hover > a {
   color: #323232;
   text-decoration: none;
 
@@ -284,7 +284,7 @@ textarea:focus {
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
-.main-menu > li > a::after {
+.top-menu-item > a::after {
   content: "";
 
   display: block;
@@ -293,11 +293,11 @@ textarea:focus {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.main-menu > li > a:hover::after {
+.top-menu-item > a:hover::after {
   background-color: #f7f6f3;
 }
 
-.main-menu li:hover .sub-menu {
+.top-menu-item:hover .sub-menu {
   display: block;
 }
 
@@ -309,10 +309,6 @@ textarea:focus {
   line-height: 16px;
   color: #323232;
   white-space: normal;
-}
-
-.sub-menu li:last-child a {
-  padding-bottom: 10px;
 }
 
 .sub-menu .highlight {
@@ -599,7 +595,6 @@ body > input[type="radio"] {
 }
 
 .breadcrumbs a {
-  color: #ffffff;
   text-decoration: none;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -686,7 +681,7 @@ body > input[type="radio"] {
 }
 
 .login .login-button,
-.cart span,
+.cart .cart-button,
 .cart-with-item .cart-button {
   display: block;
   margin-top: 0;
@@ -732,12 +727,14 @@ body > input[type="radio"] {
   background-position: -5px -5px;
 }
 
+.cart:hover::before,
 .cart-with-item::before {
   background-position: -36px -5px;
 }
 
 .login:hover .login-button,
-.cart-with-item:hover .cart-button {
+.cart-with-item:hover .cart-button,
+.cart:hover .cart-button {
   color: #313131;
 
   background-color: #f8f7f4;
@@ -1041,8 +1038,8 @@ body > input[type="radio"] {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-body .popup-feedback span,
-body .subscribe span {
+div.popup-feedback span,
+form.subscribe-form span {
   padding-left: 15px;
 }
 
@@ -1108,12 +1105,13 @@ textarea:focus + label.hiden-top span {
 }
 
 .subscribe-form {
-  width: 100%;
-  margin-bottom: 15px;
+  width: 90%;
+  position: absolute;
+  bottom: 35px;
+  box-sizing: border-box;
 }
 
 .subscribe-form input {
-  display: inline-block;
   box-sizing: border-box;
   width: calc(100% - 142px);
   margin-left: 0;
@@ -1377,12 +1375,16 @@ textarea:focus + label.hiden-top span {
 }
 
 .subscribe-wrapper {
+  position: relative;
   box-sizing: border-box;
   margin: 4px 5px;
   padding: 15px 23px;
+  padding-bottom: 5px;
 
   background-color: #f8f7f4;
   border-radius: 10px;
+  min-height: 210px;
+  padding-bottom: 75px;
 }
 
 .map-block {
@@ -1509,12 +1511,16 @@ textarea:focus + label.hiden-top span {
   border-radius: 50%;
 }
 
-.pagnition li a:hover {
+.pagnition a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.pagnition li:first-child a:hover,
-.pagnition li:last-child a:hover {
+.pagnition a:active {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.pagnition .pagnition-nav:hover {
   font-weight: 900;
 
   background: none;
@@ -1551,7 +1557,7 @@ li.pagnition-active {
 }
 
 .social-btn:hover {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7),
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.7),
   inset 0 0 0 1px rgba(255, 255, 255, 0.6);
   opacity: 1;
 }
@@ -1592,7 +1598,6 @@ li.pagnition-active {
   font-size: 13px;
   line-height: 18px;
   vertical-align: top;
-  color: #ffffff;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -1622,12 +1627,10 @@ li.pagnition-active {
 }
 
 .academy-link {
-  color: #ffffff;
   text-decoration: none;
 }
 
 .footer-copyright a {
-  color: #ffffff;
 }
 
 .footer-copyright p {
@@ -1737,7 +1740,7 @@ li.pagnition-active {
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.item-heading:hover,
+.catalog-item:hover .item-heading,
 .footer-menu a:hover,
 .footer-copyright .academy-link:hover {
   border-bottom: none;
@@ -1850,6 +1853,7 @@ input[type=range]::-ms-track {
   height: 4px;
 
   background: rgba(255, 255, 255, 0.5);
+  background: #ffffff;
 }
 
 input[type=range]::-ms-fill-lower {
